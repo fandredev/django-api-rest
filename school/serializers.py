@@ -32,3 +32,13 @@ class ListMatriculationStudentsSerializer(serializers.ModelSerializer):
 
     def get_period(self, obj):
         return obj.get_period_display()
+
+
+class ListStudentsMatriculationACourseSerializer(serializers.ModelSerializer):
+    aluno_name = serializers.ReadOnlyField(
+        source="student.name"
+    )  # Read a field from the student model
+
+    class Meta:
+        model = Matriculation
+        fields = ["aluno_name"]

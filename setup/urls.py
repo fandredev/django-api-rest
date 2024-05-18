@@ -6,6 +6,7 @@ from school.views import (
     CoursesViewSet,
     MatriculationsViewSet,
     ListMatriculationStudentsViewSet,
+    ListStudentsMatriculationACourseViewSet,
 )
 from rest_framework import routers
 
@@ -22,5 +23,10 @@ urlpatterns = [
         "student/<int:pk>/matriculations/",
         ListMatriculationStudentsViewSet.as_view(),
         name="student_matriculations",
+    ),
+    path(
+        "course/<int:pk>/matriculations/",
+        ListStudentsMatriculationACourseViewSet.as_view(),
+        name="course_matriculations",
     ),
 ]
