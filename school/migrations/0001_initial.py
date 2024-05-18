@@ -7,27 +7,53 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Course',
+            name="Course",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('description', models.TextField()),
-                ('code_course', models.CharField(max_length=10)),
-                ('nivel', models.CharField(choices=[('B', 'Basic'), ('I', 'Intermediate'), ('A', 'Advanced')], default='B', max_length=1)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("description", models.TextField()),
+                ("code_course", models.CharField(max_length=10)),
+                (
+                    "nivel",
+                    models.CharField(
+                        choices=[
+                            ("B", "Basic"),
+                            ("I", "Intermediate"),
+                            ("A", "Advanced"),
+                        ],
+                        default="B",
+                        max_length=1,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Student',
+            name="Student",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('rg', models.CharField(max_length=15)),
-                ('cpf', models.CharField(max_length=15)),
-                ('date_nasc', models.DateField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                ("rg", models.CharField(max_length=15)),
+                ("cpf", models.CharField(max_length=15)),
+                ("date_nasc", models.DateField()),
             ],
         ),
     ]
