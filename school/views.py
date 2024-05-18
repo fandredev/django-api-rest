@@ -1,9 +1,10 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from school.models import Student, Course, Matriculation
 from school.serializers import (
     StudentSerializer,
     CourseSerializer,
     MatriculationSerializer,
+    ListMatriculationStudentsSerializer,
 )
 
 
@@ -26,3 +27,13 @@ class MatriculationsViewSet(viewsets.ModelViewSet):
 
     queryset = Matriculation.objects.all().order_by("id")  # Query all matriculations
     serializer_class = MatriculationSerializer  # Serialize the data to JSON
+
+
+class ListMatriculationStudentsViewSet(generics.ListAPIView):
+    """List matriculated from student"""
+
+    serializer_class = ListMatriculationStudentsSerializer  # Serialize the data to JSON
+
+    def get_queryset(self):
+        queryset = Matriculation.objects.filter(student_id=self.kwargs["pk"])
+        return queryset
