@@ -3,6 +3,7 @@
 <img src="https://skillicons.dev/icons?i=python,django,githubactions,pycharm&theme=dark" />
 
 **Lint:** Black
+
 **CI/CD:** Github Actions
 
 ## Authors
