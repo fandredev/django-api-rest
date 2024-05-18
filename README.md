@@ -1,8 +1,9 @@
 ## Stack used
 
-<img src="https://skillicons.dev/icons?i=python,django,githubactions&theme=dark" />
+<img src="https://skillicons.dev/icons?i=python,django,githubactions,pycharm&theme=dark" />
 
 **Lint:** Black
+**CI/CD:** Github Actions
 
 ## Authors
 [@fandredev](https://www.linkedin.com/in/devfandre/)
