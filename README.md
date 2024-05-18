@@ -65,7 +65,11 @@ In another tab, open browser and put http://127.0.0.1:8000/admin in URL browser.
 ## Use collection
 <h4>Use DRF.postman_collection.json file to use Django Rest Framework routes</h4>
 
-![image](https://github.com/fandredev/django-recipes/assets/49297012/53ff7ffb-8810-4e39-8316-980c7a342a0d)
+![Screenshot from 2024-05-18 17-58-06](https://github.com/fandredev/django-api-rest/assets/49297012/6d51ea14-f39c-48fa-9602-de3bbf994eb9)
+
+- Pass, the user and password authorization to using routes (super/password that were created with python manage.py createsuperuser)
+![image](https://github.com/fandredev/django-api-rest/assets/49297012/0fa811c5-020d-44a9-a7c9-3351420c3beb)
+
 
 <br>
 
@@ -79,3 +83,4 @@ If you have any feedback, please let us know via profissionalf.andre@gmail.com
  - [Django documentation](https://docs.djangoproject.com/en/5.0/)
  - [Python](https://www.python.org/)
  - [Black formatter](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
+ - [Alura Course](https://cursos.alura.com.br/course/api-django-3-rest-framework)
