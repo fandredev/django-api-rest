@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "779cc1e8-9da9-4f80-848b-09e5534424b4",
+		"name": "DRF Alura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7059246",
+		"_collection_link": "https://bold-spaceship-399240.postman.co/workspace/My-Workspace~eda438f2-214b-4ecf-8d84-b02b922c88b1/collection/7059246-779cc1e8-9da9-4f80-848b-09e5534424b4?action=share&source=collection_link&creator=7059246"
+	},
+	"item": [
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Get Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/courses/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Curso teste 05\",\n    \"code_course\": \"CDT05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/courses/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Curso 5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/courses/5/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"courses",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Especific Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/courses/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Especific Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/courses/3/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"courses",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Matriculation",
+			"item": [
+				{
+					"name": "Get Matriculations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/matriculations/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"matriculations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Matriculation by Student ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/student/3/matriculations",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"student",
+								"3",
+								"matriculations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Matriculation by Course ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/course/2/matriculations",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"course",
+								"2",
+								"matriculations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Matriculation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"period\": \"Afternoon\",\n    \"course\": \"\",\n    \"student\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/matriculations/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"matriculations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Matriculation",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"period\": \"Afternoon\",\n    \"course\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/matriculations/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"matriculations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Especific Matriculation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/matriculations/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"matriculations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Especific Matriculation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/matriculations/3/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"matriculations",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Get Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/students/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"students",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Especific Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/students/2/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"students",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Juliana\",\n    \"rg\": \"17.838.617-0\",\n    \"cpf\": \"548.260.377-67\",\n    \"date_nasc\": \"2024-05-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/students/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"students",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Juliana Postman de volta\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/students/2/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"students",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Especific Students",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/students/2/",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"students",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
