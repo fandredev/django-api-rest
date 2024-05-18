@@ -27,3 +27,25 @@ class Course(models.Model):
 
     def __str__(self):
         return self.description
+
+
+PERIOD_CHOICES = (
+    ("M", "Morning"),
+    ("A", "Afternoon"),
+    ("N", "Night"),
+)
+
+
+class Matriculation(models.Model):
+    student = models.ForeignKey(
+        Student, on_delete=models.CASCADE
+    )  # One matriculation has one student
+    course = models.ForeignKey(
+        Course, on_delete=models.CASCADE
+    )  # One matriculation has one course
+    period = models.CharField(
+        max_length=1, choices=PERIOD_CHOICES, blank=False, null=False, default="M"
+    )
+
+    def __str__(self):
+        return f"{self.student} - {self.course}"

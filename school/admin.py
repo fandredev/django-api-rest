@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from school.models import Student, Course
+from school.models import Student, Course, Matriculation
 
 # Register your models here.
 
@@ -33,4 +33,28 @@ class CourseAdmin(admin.ModelAdmin):
     )
     search_fields = ("code_course",)
     list_filter = ("description", "code_course")
+    list_per_page = 20
+
+
+@admin.register(Matriculation)
+class MatriculationAdmin(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "student",
+        "course",
+        "period",
+    )
+    list_display_links = (
+        "student",
+        "id",
+    )
+    search_fields = (
+        "student",
+        "course",
+    )
+    list_filter = (
+        "student",
+        "course",
+        "period",
+    )
     list_per_page = 20

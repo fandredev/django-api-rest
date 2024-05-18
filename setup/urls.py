@@ -1,10 +1,16 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from school.views import students
+from school.views import StudentsViewSet, CoursesViewSet, MatriculationsViewSet
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+
+router.register("students", StudentsViewSet, basename="students")
+router.register("courses", CoursesViewSet, basename="courses")
+router.register("matriculations", MatriculationsViewSet, basename="matriculations")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api-auth/", include("rest_framework.urls")),
-    path("students/", students),
+    path("", include(router.urls)),
 ]
