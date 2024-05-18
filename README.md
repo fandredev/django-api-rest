@@ -67,7 +67,9 @@ In another tab, open browser and put http://127.0.0.1:8000/admin in URL browser.
 
 ![Screenshot from 2024-05-18 17-58-06](https://github.com/fandredev/django-api-rest/assets/49297012/6d51ea14-f39c-48fa-9602-de3bbf994eb9)
 
-- Pass, the user and password authorization to using routes (super/password that were created with python manage.py createsuperuser)
+Pass, the user and password authorization to using routes (super/password that were created with ```python manage.py createsuperuser```)
+<br>
+
 ![image](https://github.com/fandredev/django-api-rest/assets/49297012/0fa811c5-020d-44a9-a7c9-3351420c3beb)
 
 
