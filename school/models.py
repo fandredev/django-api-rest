@@ -3,8 +3,8 @@ from django.db import models
 
 class Student(models.Model):
     name = models.CharField(max_length=100)
-    rg = models.CharField(max_length=15)
-    cpf = models.CharField(max_length=15)
+    rg = models.CharField(max_length=15, unique=True)
+    cpf = models.CharField(max_length=15, unique=True)
     date_nasc = models.DateField()
 
     def __str__(self):

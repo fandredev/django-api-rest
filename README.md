@@ -1,6 +1,7 @@
 ## Stack used
 
-<img src="https://skillicons.dev/icons?i=python,django,githubactions,pycharm&theme=dark" />
+<img src="https://skillicons.dev/icons?i=python,django,githubactions,postgresql&theme=dark" />
+
 
 **Lint:** Black
 
@@ -37,6 +38,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+- Look the .env.example file to change your informations from PostgreSQL database. 
+A database must be created using PostgreSQL manually and your server needs be a running in other terminal.
+
+
 ## Run migrations to database
 ```bash
 python manage.py migrate
@@ -62,6 +67,12 @@ Open browser and put http://127.0.0.1:8000/ in URL browser.
 <h4>
 In another tab, open browser and put http://127.0.0.1:8000/admin in URL browser. Log in with your superuser</h4>
 <br>
+
+## OPTIONAL (Populate your database using faker data)
+
+```
+python populate_students.py
+``` 
 
 
 ## Use collection
