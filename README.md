@@ -65,7 +65,7 @@ python manage.py runserver
 
 ## Open development server
 <h4>
-Open browser and put http://127.0.0.1:8000/ in URL browser.
+Open browser and put http://127.0.0.1:8000/students in URL browser and logged in with your superuser.
 </h4>
 
 ## Open Django Admin
