@@ -65,6 +65,12 @@ Open browser and put http://127.0.0.1:8000/ in URL browser.
 In another tab, open browser and put http://127.0.0.1:8000/admin in URL browser. Log in with your superuser</h4>
 <br>
 
+## OPTIONAL (Populate your database using faker data)
+
+```
+python populate_students.py
+``` 
+
 
 ## Use collection
 <h4>Use DRF.postman_collection.json file to use Django Rest Framework routes</h4>
