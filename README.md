@@ -41,6 +41,12 @@ pip install -r requirements.txt
 - Look the .env.example file to change your informations from PostgreSQL database. 
 A database must be created using PostgreSQL manually and your server needs be a running in other terminal.
 
+In example, i use asdf to instance postgres in my machine. (https://asdf-vm.com/)
+
+![image](https://github.com/fandredev/django-api-rest/assets/49297012/ff27b012-8189-4410-819b-520301a7f4ce)
+![image](https://github.com/fandredev/django-api-rest/assets/49297012/fde61b22-bc75-4b82-8aae-f7153c8dd200)
+
+
 
 ## Run migrations to database
 ```bash
@@ -61,7 +67,6 @@ python manage.py runserver
 <h4>
 Open browser and put http://127.0.0.1:8000/ in URL browser.
 </h4>
-<br>
 
 ## Open Django Admin
 <h4>
@@ -79,6 +84,7 @@ python populate_students.py
 <h4>Use DRF.postman_collection.json file to use Django Rest Framework routes</h4>
 
 ![Screenshot from 2024-05-18 17-58-06](https://github.com/fandredev/django-api-rest/assets/49297012/6d51ea14-f39c-48fa-9602-de3bbf994eb9)
+
 
 Pass, the user and password authorization to using routes (super/password that were created with ```python manage.py createsuperuser```)
 <br>
