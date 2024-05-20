@@ -1,6 +1,6 @@
 ## Stack used
 
-<img src="https://skillicons.dev/icons?i=python,django,githubactions&theme=dark" />
+<img src="https://skillicons.dev/icons?i=python,django,githubactions,postgresql&theme=dark" />
 
 **Lint:** Black
 
@@ -34,6 +34,10 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+- Look the .env.example file to change your informations from PostgreSQL database. 
+A database must be created using PostgreSQL manually and your server needs be a running in other terminal.
+
 
 ## Run migrations to database
 ```bash
