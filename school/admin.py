@@ -18,6 +18,7 @@ class StudentAdmin(admin.ModelAdmin):
     search_fields = ("name",)
     list_filter = ("name", "cpf")
     list_per_page = 20
+    ordering = ("name",)
 
 
 @admin.register(Course)
@@ -34,6 +35,7 @@ class CourseAdmin(admin.ModelAdmin):
     search_fields = ("code_course",)
     list_filter = ("description", "code_course")
     list_per_page = 20
+    ordering = ("description",)
 
 
 @admin.register(Matriculation)
