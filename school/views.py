@@ -8,8 +8,6 @@ from school.serializers import (
     ListMatriculationStudentsSerializer,
     ListStudentsMatriculationACourseSerializer,
 )
-from rest_framework.authentication import BasicAuthentication
-from rest_framework.permissions import IsAuthenticated
 from django_filters.rest_framework import DjangoFilterBackend
 
 
@@ -17,8 +15,6 @@ class StudentsViewSet(viewsets.ModelViewSet):
     """Show all students"""
 
     queryset = Student.objects.all().order_by("id")  # Query all students
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [BasicAuthentication]
     filter_backends = [
         DjangoFilterBackend,
         filters.SearchFilter,
@@ -38,8 +34,6 @@ class CoursesViewSet(viewsets.ModelViewSet):
 
     queryset = Course.objects.all().order_by("id")
     serializer_class = CourseSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [BasicAuthentication]
     filter_backends = [
         DjangoFilterBackend,
         filters.SearchFilter,
@@ -54,16 +48,12 @@ class MatriculationsViewSet(viewsets.ModelViewSet):
 
     queryset = Matriculation.objects.all().order_by("id")
     serializer_class = MatriculationSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [BasicAuthentication]
 
 
 class ListMatriculationStudentsViewSet(generics.ListAPIView):
     """List matriculated from student"""
 
     serializer_class = ListMatriculationStudentsSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [BasicAuthentication]
 
     def get_queryset(self):
         queryset = Matriculation.objects.filter(student_id=self.kwargs["pk"])
@@ -74,8 +64,6 @@ class ListStudentsMatriculationACourseViewSet(generics.ListAPIView):
     """List students matriculated in a course"""
 
     serializer_class = ListStudentsMatriculationACourseSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [BasicAuthentication]
 
     def get_queryset(self):
         queryset = Matriculation.objects.filter(course_id=self.kwargs["pk"])
