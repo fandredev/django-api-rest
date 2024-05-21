@@ -6,6 +6,7 @@ class Student(models.Model):
     rg = models.CharField(max_length=15, unique=True)
     cpf = models.CharField(max_length=15, unique=True)
     date_nasc = models.DateField()
+    phone = models.CharField(max_length=15, default="")
 
     def __str__(self):
         return self.name
