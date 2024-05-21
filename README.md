@@ -9,6 +9,7 @@
 
 ## Authors
 [@fandredev](https://www.linkedin.com/in/devfandre/)
+[Alura](https://cursos.alura.com.br/course/api-django-3-versionamento-cabecalhos-cors)
 
 
 ## Installation:
