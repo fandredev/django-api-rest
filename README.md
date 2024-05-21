@@ -68,6 +68,10 @@ python manage.py runserver
 Open browser and put http://127.0.0.1:8000/students in URL browser and logged in with your superuser.
 </h4>
 
+- Note: or using ```launch.json```  file (if you use vscode)
+
+- Note 2 : to use v2 use, http://127.0.0.1:8000/students?version=v2
+
 ## Open Django Admin
 <h4>
 In another tab, open browser and put http://127.0.0.1:8000/admin in URL browser. Log in with your superuser</h4>
@@ -76,9 +80,9 @@ In another tab, open browser and put http://127.0.0.1:8000/admin in URL browser.
 ## OPTIONAL (Populate your database using faker data)
 
 ```
-python populate_students.py
-``` 
+python populate_students.py && python populate_courses.py
 
+``` 
 
 ## Use collection
 <h4>Use DRF.postman_collection.json file to use Django Rest Framework routes</h4>
