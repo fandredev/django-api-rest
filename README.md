@@ -11,9 +11,10 @@
 - [@fandredev](https://www.linkedin.com/in/devfandre/)
 - [Alura](https://cursos.alura.com.br/formacao-django-rest)
 
+<br>
 
-## Installation:
-### First, clone this repository.
+# Installation:
+## First, clone this repository.
 ```bash
 git clone git@github.com:fandredev/django-api-rest.git
 ```
@@ -63,19 +64,13 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
+- or using ```launch.json```  file (if you use vscode)
 
-## Open development server
-<h4>
-Open browser and put http://127.0.0.1:8000/students in URL browser and logged in with your superuser.
-</h4>
 
-- Note: or using ```launch.json```  file (if you use vscode)
-
-- Note 2 : to use v2 use, http://127.0.0.1:8000/students?version=v2
 
 ## Open Django Admin
 <h4>
-In another tab, open browser and put http://127.0.0.1:8000/admin in URL browser. Log in with your superuser</h4>
+In another tab, open browser and put http://localhost:8000/admin in URL browser. Log in with your superuser</h4>
 <br>
 
 ## OPTIONAL (Populate your database using faker data)
@@ -90,12 +85,16 @@ python populate_students.py && python populate_courses.py
 ![Screenshot from 2024-05-18 17-58-06](https://github.com/fandredev/django-api-rest/assets/49297012/6d51ea14-f39c-48fa-9602-de3bbf994eb9)
 
 
-Pass, the user and password authorization to using routes (super/password that were created with ```python manage.py createsuperuser```)
+- Pass, the user and password authorization to using routes (super/password that were created with ```python manage.py createsuperuser```)
 <br>
 
 ![image](https://github.com/fandredev/django-api-rest/assets/49297012/0fa811c5-020d-44a9-a7c9-3351420c3beb)
 
+- by default, the answers will come in .xml; Change this using 'Accept' header with 'application/json' value.
 
+![Accept header](image.png)
+
+- Note : to use students routes v2 use, http://localhost:8000/students?version=v2
 <br>
 
 

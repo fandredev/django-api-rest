@@ -11,6 +11,8 @@ from school.serializers import (
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
 from http import HTTPStatus
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 
 
 class StudentsViewSet(viewsets.ModelViewSet):
@@ -61,6 +63,10 @@ class MatriculationsViewSet(viewsets.ModelViewSet):
     queryset = Matriculation.objects.all().order_by("id")
     serializer_class = MatriculationSerializer
     http_method_names = ["get", "head", "post", "put", "patch", "delete"]
+
+    @method_decorator(cache_page(15))
+    def dispatch(self, *args, **kwargs):
+        return super(MatriculationsViewSet, self).dispatch(*args, **kwargs)
 
 
 class ListMatriculationStudentsViewSet(generics.ListAPIView):
