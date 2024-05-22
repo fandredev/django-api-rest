@@ -91,10 +91,9 @@ python populate_students.py && python populate_courses.py
 ![image](https://github.com/fandredev/django-api-rest/assets/49297012/0fa811c5-020d-44a9-a7c9-3351420c3beb)
 
 - by default, the answers will come in .xml; Change this using 'Accept' header with 'application/json' value.
+![Screenshot from 2024-05-22 19-12-41](https://github.com/fandredev/django-api-rest/assets/49297012/69969618-9888-4876-be17-40316acdf48f)
 
-![Accept header](image.png)
-
-- Note : to use students routes v2 use, http://localhost:8000/students?version=v2
+- Note: to use students routes v2 use, http://localhost:8000/students?version=v2
 <br>
 
 
