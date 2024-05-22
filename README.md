@@ -8,8 +8,8 @@
 **CI/CD:** Github Actions
 
 ## Authors
-[@fandredev](https://www.linkedin.com/in/devfandre/)
-[Alura](https://cursos.alura.com.br/course/api-django-3-versionamento-cabecalhos-cors)
+- [@fandredev](https://www.linkedin.com/in/devfandre/)
+- [Alura](https://cursos.alura.com.br/formacao-django-rest)
 
 
 ## Installation:
@@ -82,7 +82,6 @@ In another tab, open browser and put http://127.0.0.1:8000/admin in URL browser.
 
 ```
 python populate_students.py && python populate_courses.py
-
 ``` 
 
 ## Use collection
@@ -109,4 +108,4 @@ If you have any feedback, please let us know via profissionalf.andre@gmail.com
  - [Django documentation](https://docs.djangoproject.com/en/5.0/)
  - [Python](https://www.python.org/)
  - [Black formatter](https://black.readthedocs.io/en/stable/the_black_code_style/index.html)
- - [Alura Course](https://cursos.alura.com.br/course/api-django-3-rest-framework)
+ - [Alura Training](https://cursos.alura.com.br/formacao-django-rest)
