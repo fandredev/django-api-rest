@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "school",
     "django_filters",
     "corsheaders",
+    "admin_honeypot",
 ]
 
 MIDDLEWARE = [

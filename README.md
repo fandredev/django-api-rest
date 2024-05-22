@@ -70,7 +70,7 @@ python manage.py runserver
 
 ## Open Django Admin
 <h4>
-In another tab, open browser and put http://localhost:8000/admin in URL browser. Log in with your superuser</h4>
+In another tab, open browser and put http://localhost:8000/control in URL browser. Log in with your superuser</h4>
 <br>
 
 ## OPTIONAL (Populate your database using faker data)
