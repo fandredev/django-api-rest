@@ -7,7 +7,7 @@ from validate_docbr import CPF
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ["id", "name", "rg", "cpf", "date_nasc"]
+        fields = ["id", "name", "rg", "cpf", "date_nasc", "photo"]
 
     # TODO: move to validators.py
     def validate_cpf(self, cpf: str):
@@ -72,4 +72,4 @@ class ListStudentsMatriculationACourseSerializer(serializers.ModelSerializer):
 class StudentSerializerV2(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ["id", "name", "rg", "cpf", "phone", "date_nasc"]
+        fields = ["id", "name", "rg", "cpf", "phone", "date_nasc", "photo"]

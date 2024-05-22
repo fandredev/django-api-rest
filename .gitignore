@@ -161,3 +161,4 @@ cython_debug/
 
 
 api-client-keys.pem
+media_root/
