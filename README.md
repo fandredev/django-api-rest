@@ -66,7 +66,10 @@ python manage.py runserver
 ```
 - or using ```launch.json```  file (if you use vscode)
 
-
+## Run tests
+```bash
+python manage.py test
+```
 
 ## Open Django Admin
 <h4>
