@@ -9,6 +9,8 @@ from school.serializers import (
     ListStudentsMatriculationACourseSerializer,
 )
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.response import Response
+from http import HTTPStatus
 
 
 class StudentsViewSet(viewsets.ModelViewSet):
@@ -42,12 +44,23 @@ class CoursesViewSet(viewsets.ModelViewSet):
     ordering_fields = ["id"]
     search_fields = ["nivel", "code_course"]
 
+    def create(self, request):
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            response = Response(serializer.data, status=HTTPStatus.CREATED)
+            id = str(serializer.data["id"])  # type: ignore
+            response["Location"] = f"request.build_absolute_uri/{id}"
+
+            return response
+
 
 class MatriculationsViewSet(viewsets.ModelViewSet):
     """Show all matriculations"""
 
     queryset = Matriculation.objects.all().order_by("id")
     serializer_class = MatriculationSerializer
+    http_method_names = ["get", "head", "post", "put", "patch", "delete"]
 
 
 class ListMatriculationStudentsViewSet(generics.ListAPIView):

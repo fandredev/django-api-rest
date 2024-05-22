@@ -44,11 +44,13 @@ INSTALLED_APPS = [
     "rest_framework",
     "school",
     "django_filters",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -147,6 +149,14 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [  # Authentication by default
         "rest_framework.authentication.BasicAuthentication",
     ],
+    # # Limiting the number of requests to anonymous users
+    # "DEFAULT_THROTTLE_CLASSES": [
+    #     "rest_framework.throttling.AnonRateThrottle",
+    # ],
+    # "DEFAULT_THROTTLE_RATES": {"anon": "300/day"},
 }
-
-# Versioning
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "http://localhost:3000",
+    # OTHER DOMAINS,
+]
