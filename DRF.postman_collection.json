@@ -8,11 +8,26 @@
 	},
 	"item": [
 		{
-			"name": "Courses",
+			"name": "Course",
 			"item": [
 				{
 					"name": "Get Courses",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -127,9 +142,51 @@
 			"item": [
 				{
 					"name": "Get Matriculations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).not.null",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "0:+_f-xyUZJ!rm]",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "ana",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{API_URL}}/matriculations/",
 							"host": [
@@ -145,6 +202,27 @@
 				},
 				{
 					"name": "List Matriculation by Student ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).not.null",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -164,12 +242,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_URL}}/student/3/matriculations",
+							"raw": "{{API_URL}}/students/3/matriculations",
 							"host": [
 								"{{API_URL}}"
 							],
 							"path": [
-								"student",
+								"students",
 								"3",
 								"matriculations"
 							]
@@ -179,16 +257,37 @@
 				},
 				{
 					"name": "List Matriculation by Course ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).not.null",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_URL}}/course/2/matriculations",
+							"raw": "{{API_URL}}/courses/2/matriculations",
 							"host": [
 								"{{API_URL}}"
 							],
 							"path": [
-								"course",
+								"courses",
 								"2",
 								"matriculations"
 							]
@@ -199,11 +298,38 @@
 				{
 					"name": "Create Matriculation",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "0:+_f-xyUZJ!rm]",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "ana",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "pt-br",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"period\": \"Afternoon\",\n    \"course\": \"\",\n    \"student\":\"\"\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -295,6 +421,21 @@
 				{
 					"name": "Get Students",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "0:+_f-xyUZJ!rm]",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "ana",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -332,11 +473,26 @@
 				{
 					"name": "Create Student",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Juliana\",\n    \"rg\": \"17.838.617-0\",\n    \"cpf\": \"548.260.377-67\",\n    \"date_nasc\": \"2024-05-15\"\n}",
+							"raw": "{\n    \"name\": \"Juliana\",\n    \"rg\": \"25.289.657-1\",\n    \"cpf\": \"504.223.910-34\",\n    \"date_nasc\": \"2024-05-15\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -387,16 +543,19 @@
 				{
 					"name": "Delete Especific Students",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{API_URL}}/students/2/",
+							"raw": "{{API_URL}}/students/30/",
 							"host": [
 								"{{API_URL}}"
 							],
 							"path": [
 								"students",
-								"2",
+								"30",
 								""
 							]
 						}
